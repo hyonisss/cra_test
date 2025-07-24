@@ -1,10 +1,6 @@
-import unittest
+from mission2.brake import *
 
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
-
-
-if __name__ == '__main__':
-    unittest.main()
+def test_brake_names():
+    assert MandoBrake().name() == "MANDO"
+    assert ContinentalBrake().name() == "CONTINENTAL"
+    assert BoschBrake().name() == "BOSCH"

@@ -1,10 +1,15 @@
-import unittest
+from mission2.engine import *
 
+def test_engine_names():
+    assert GMEngine().name() == "GM"
+    assert ToyotaEngine().name() == "TOYOTA"
+    assert WIAEngine().name() == "WIA"
+    assert BrokenEngine().name() == "고장난"
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+def test_engine_broken_status():
+    assert not GMEngine().is_broken()
+    assert BrokenEngine().is_broken()
 
-
-if __name__ == '__main__':
-    unittest.main()
+def test_all_engines_is_broken_status():
+    assert not ToyotaEngine().is_broken()
+    assert not WIAEngine().is_broken()

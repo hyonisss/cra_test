@@ -1,10 +1,5 @@
-import unittest
+from mission2.steering import *
 
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
-
-
-if __name__ == '__main__':
-    unittest.main()
+def test_steering_names():
+    assert BoschSteering().name() == "BOSCH"
+    assert MobisSteering().name() == "MOBIS"
