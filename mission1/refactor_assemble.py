@@ -140,7 +140,9 @@ def run_produced_car(config: CarConfig) -> None:
         print("자동차가 움직이지 않습니다.")
         return
 
-    print(f"Car Type: {config.car_type.name}")
+    car_type_name = "SUV" if config.car_type.name=="SUV" else config.car_type.name.title()
+
+    print(f"Car Type: {car_type_name}")
     print(f"Engine: {config.engine.name}")
     print(f"Brake: {config.brake.name.title()}")
     print(f"Steering: {config.steering.name.title()}")
