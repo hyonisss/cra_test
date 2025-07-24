@@ -36,15 +36,15 @@ class CarConfig:
     steering: Optional[Steering] = None
 
 
-def delay(ms):
+def delay(ms) -> None:
     t = ms / 1000.0
     time.sleep(t)
 
-def clear():
+def clear() -> None:
     sys.stdout.write(CLEAR_SCREEN)
     sys.stdout.flush()
 
-def show_menu(step):
+def show_menu(step: int) -> None:
     clear()
     if step == 0:
         print("        ______________")
